@@ -1,0 +1,42 @@
+.login{
+    width: 100%;
+    height: 100vh;
+    background:rgb(121, 194, 11);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    outline: none;
+    margin: 10px 0;
+    text-indent: 10px;
+}
+
+.settingIcon{
+    position: absolute;
+    top:20px;
+    right: 20px;
+    font-size: 30px;
+}
+
+.setting{
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    transition: 0.5s;
+    background-color:pink;
+}
+
+.colorItem{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 10px 0;
+}

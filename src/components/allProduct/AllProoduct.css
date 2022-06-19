@@ -1,0 +1,15 @@
+.allProducts{
+    width: 100%;
+    height: auto;
+    background-color:#3b83f7;
+}
+
+.trashBtn{
+    width:90%;
+    height: 30px;
+    font-size: 19px;
+    background-color: #f00;
+    border: none;
+    border-radius:20px;
+    margin:7px auto;
+}
