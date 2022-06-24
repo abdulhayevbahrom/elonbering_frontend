@@ -1,7 +1,7 @@
 import React,{useEffect, useState} from 'react'
 import Header from '../../components/header/Header'
 import './Avtomobile.css'
-// import {allData} from '../../data/data'
+import {allDatas} from '../../data/data'
 import axios from 'axios'
 import loader from '../../assets/loader.svg'
 
@@ -18,8 +18,8 @@ function Avtomobile() {
         <Header/>
         <div className='banner' style={!allData.length ? {background:"#fff"} : {background:"#c2c2c2"}}>
             <div className="banner_container">
-                {!allData.length ? <img src={loader} alt="" />  : 
-                allData.map((product, index) =>
+                {!allDatas.length ? <img src={loader} alt="" />  : 
+                allDatas.map((product, index) =>
                     <div key={index} className="banner_item">
                         <div className="banner_item_photo">
                             <img src={product.img} alt="avto" title={product.name} />
@@ -36,9 +36,9 @@ function Avtomobile() {
                             }
                             <p className='productPrice'>Narxi: <b>{product.price}</b></p>
                             <p className='authorNumber'>Tel: <b>+998{product.phoneNumber}</b></p>
-                            <p className="item_date">
+                            {/* <p className="item_date">
                                 {[...product?.date].splice(0, [...product?.date].indexOf("T")).join("")}
-                            </p>
+                            </p> */}
                         </div>
                     </div>
                 )}
