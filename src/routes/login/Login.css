@@ -1,42 +1,309 @@
-.login{
+@import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
+.login {
+  width: 100%;
+  height: 100vh;
+  background-color: #363740;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.loginForm {
+  padding: 0 32px;
+  width: 380px;
+  height: 582px;
+  border-radius: 8px;
+  border: 1px solid #dfe0eb;
+  background-color: #fff;
+  padding-top: 53px;
+}
+
+.loginFormLogo {
+  text-align: center;
+}
+
+.loginFormCaption {
+  font-family: "Mulish";
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 24px;
+  letter-spacing: 0.4px;
+  color: #a4a6b3;
+  margin-top: 8px;
+}
+
+.loginFormDescription {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 0.3px;
+  color: #9fa2b4;
+  margin-top: 64px;
+  margin-bottom: 38px;
+}
+
+.loginFormEmail {
+  width: 100%;
+  height: 64px;
+}
+
+.loginFormEmail p {
+  font-family: "Mulish";
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  color: #9fa2b4;
+}
+
+.loginFormEmail input {
+  width: 100%;
+  height: 42px;
+  background: #fcfdfe;
+  border: 1px solid #f0f1f7;
+  border-radius: 8px;
+  margin-top: 6px;
+  text-indent: 15px;
+  font-size: 20px;
+  outline: none;
+}
+
+.loginFormPassword {
+  width: 100%;
+  margin-top: 24px;
+}
+
+.loginFormPasswordDescription {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.loginFormPasswordDescription p {
+  font-family: "Mulish";
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  color: #9fa2b4;
+}
+
+.loginFormPasswordDescription a {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 13px;
+  text-align: right;
+  letter-spacing: 0.1px;
+  color: #9fa2b4;
+  text-decoration: none;
+  margin-bottom: 6px;
+}
+
+.loginFormPass {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 42px;
+  background: #fcfdfe;
+  border: 1px solid #f0f1f7;
+  border-radius: 8px;
+  margin-top: 6px;
+  text-indent: 15px;
+  padding: 0 15px;
+}
+
+.loginFormPass input {
+  border: none;
+  outline: none;
+  font-size: 20px;
+}
+
+.loginFormPass svg {
+  color: #9fa2b4;
+  font-size: 21px;
+  cursor: pointer;
+}
+
+.logInBtn {
+  width: 100%;
+  height: 48px;
+  background: #3751ff;
+  box-shadow: 0px 4px 12px rgba(55, 81, 255, 0.24);
+  border-radius: 8px;
+  border: none;
+  font-family: "Mulish";
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+  margin-top: 25px;
+  cursor: pointer;
+}
+
+.loginForm_signUp {
+  text-align: center;
+  margin-top: 32px;
+  font-family: "Mulish";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.3px;
+  color: #9fa2b4;
+}
+
+.loginForm_signUp a {
+  color: #3751ff;
+  text-decoration: none;
+}
+
+.loginFormPasswordDescription a:hover{
+    color: #3751ff;
+}
+
+@media screen and (max-height:680px){
+    .loginForm{
+        height: 520px;
+    }
+
+    .loginFormDescription {
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-height:591px){
+    .loginForm{
+        height: 500px;
+        padding-top: 35px;
+    }
+
+    .loginFormDescription {
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    .loginFormEmail input,
+  .loginFormPass {
+    height: 35px;
+    font-size: 17px;
+  }
+
+  .loginFormPass input {
+    font-size: 17px;
+  }
+
+  .logInBtn {
+    height: 35px;
+  }
+}
+
+
+@media screen and (max-width: 460px) {
+  .loginForm {
+    width: 80%;
+    height: 540px;
+    padding: 0 25px;
+    padding-top: 30px;
+  }
+
+  .loginFormEmail input,
+  .loginFormPass {
+    height: 37px;
+    font-size: 17px;
+  }
+
+  .loginFormPass input {
+    font-size: 17px;
+  }
+
+  .logInBtn {
     width: 100%;
-    height: 100vh;
-    background:rgb(121, 194, 11);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 37px;
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 25px;
+  }
+}
+
+@media screen and (max-width: 446px) {
+  .loginFormPass input {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .loginForm {
+    height: 500px;
+  }
+
+  .loginFormDescription {
+    margin-top: 37px;
+    margin-bottom: 25px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .loginForm_signUp {
+    margin-top: 27px;
+    font-size: 12px;
+  }
+
+  .loginFormEmail p,
+  .loginFormPasswordDescription p {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .loginForm {
+    height: 450px;
+  }
+
+  .loginFormDescription {
+    margin-top: 20px;
+    margin-bottom: 18px;
+  }
+
+  .loginFormCaption {
+    font-size: 16px;
+  }
+
+  .loginFormDescription {
+    font-size: 12px;
+  }
+
+  .loginFormEmail input,
+  .loginFormPass {
+    height: 32px;
+    font-size: 17px;
+  }
+
+  .logInBtn{
+      height: 32px;
+  }
+
+  .loginFormPass svg {
+    font-size: 18px;
+  }
+
+  .loginFormPassword{
+      margin-top: 10px;
+  }
 }
 
 
-form{
-    display: flex;
-    flex-direction: column;
-}
-
-input{
-    outline: none;
-    margin: 10px 0;
-    text-indent: 10px;
-}
-
-.settingIcon{
-    position: absolute;
-    top:20px;
-    right: 20px;
-    font-size: 30px;
-}
-
-.setting{
-    position: absolute;
-    top: 50px;
-    right: 50px;
-    transition: 0.5s;
-    background-color:pink;
-}
-
-.colorItem{
-    width: 30px;
-    height: 30px;
+.loginlogo{
+    width: 60px;
+    height:60px;
     border-radius: 50%;
-    margin: 10px 0;
 }

@@ -9,6 +9,7 @@ import Texnikalar from './routes/texnikalar/Texnikalar'
 import Admin from './routes/admin/Admin';
 import Mebellar from './routes/mebellar/Mebellar';
 import OziqOvqat from './routes/oziqOvqat/OziqOvqat'
+import Login from '../src/routes/login/Login'
 
 function App() {
   return (
@@ -16,14 +17,15 @@ function App() {
       <div className="app"> 
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/avtomobile" component={Avtomobile} />
-          <Route exact path="/houses" component={Houses} />
-          <Route exact path="/mobile" component={Mobile} />
-          <Route exact path="/maishiyTexnikalar" component={MaishiyTexnikalar} />
-          <Route exact path="/texnikalar" component={Texnikalar} />
-          <Route exact path="/mebel" component={Mebellar} />
-          <Route exact path="/oziqovqat" component={OziqOvqat} />
-          <Route exact path="/admin" component={Admin} />
+          <Route path="/avtomobile" component={Avtomobile} />
+          <Route path="/houses" component={Houses} />
+          <Route path="/mobile" component={Mobile} />
+          <Route path="/maishiyTexnikalar" component={MaishiyTexnikalar} />
+          <Route path="/texnikalar" component={Texnikalar} />
+          <Route path="/mebel" component={Mebellar} />
+          <Route path="/oziqovqat" component={OziqOvqat} />
+          <Route path="/admin" component={Admin} />
+          <Route path="/login" component={Login}/>
         </Switch>
       </div>
     </Router>
