@@ -1,6 +1,8 @@
 import gentra from '../../src/assets/gentra.jpg'
 import matiz from '../../src/assets/matiz.jpg'
 import hundai from '../../src/assets/IMG_20220627_162916_907.jpg'
+import nexia3 from '../../src/assets/IMG_20220627_162916_907.jpg'
+
 
 export const allDatas = [
   {
@@ -28,5 +30,14 @@ export const allDatas = [
     phoneNumber:993539833,
     price:"29.000$",
     manzil:"Toshkent",
-  }
+  },
+{
+    img:nexia3,
+    name:"nexia 3",
+    color:"oq",
+    year:2019,
+    phoneNumber:991581235,
+    price:"Boshidan 5.000$ 26 oy kriditi bor oyiga 2.700.000 somdan",
+    manzil:"Jizzax",
+  },
 ] 
