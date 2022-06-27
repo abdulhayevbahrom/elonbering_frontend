@@ -1,5 +1,6 @@
 import gentra from '../../src/assets/gentra.jpg'
 import matiz from '../../src/assets/matiz.jpg'
+import hundai from '../../src/assets/IMG_20220627_162916_907.jpg'
 
 export const allDatas = [
   {
@@ -19,6 +20,13 @@ export const allDatas = [
     phoneNumber:916901007,
     price:"4.050 $",
     manzil:"Qo'qon",
-  },
-  
+  },{
+    img:hundai,
+    name:"hundai",
+    color:"oq",
+    year:2020,
+    phoneNumber:993539833,
+    price:"29.000$",
+    manzil:"Toshkent",
+  }
 ] 
