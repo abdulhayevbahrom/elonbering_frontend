@@ -20,14 +20,5 @@ export const allDatas = [
     price:"4.050 $",
     manzil:"Qo'qon",
   },
-  {
-    img:matiz,
-    name:"matiz",
-    color:"oq",
-    year:2009,
-    phoneNumber:916901007,
-    price:"4.050 $",
-    manzil:"Qo'qon",
-  },
   
 ] 
