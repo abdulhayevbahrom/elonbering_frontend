@@ -1,7 +1,7 @@
 import gentra from '../../src/assets/gentra.jpg'
 import matiz from '../../src/assets/matiz.jpg'
 import hundai from '../../src/assets/IMG_20220627_162916_907.jpg'
-import nexia3 from '../../src/assets/IMG_20220627_162916_907.jpg'
+import nexia3 from '../../src/assets/IMG_20220627_163906_933.jpg'
 
 
 export const allDatas = [
