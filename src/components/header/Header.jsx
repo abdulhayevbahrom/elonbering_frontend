@@ -4,8 +4,8 @@ import './Header.css'
 import tg from '../../assets/tg.png'
 import youtube from '../../assets/youtube.png'
 import instagram from '../../assets/insta.png'
-import facebook from '../../assets/facebook.png'
 import logo from '../../assets/logonew.jpg'
+// import facebook from '../../assets/facebook.png'
 import avtomobiles from '../../assets/hdrCar.png'
 import uyJoy from '../../assets/uyJoy.png'
 import mobileTex from '../../assets/mobileTex.png'
@@ -28,7 +28,8 @@ function Header() {
           <a target='blank' href="https://t.me/elonbering_uz"><img src={tg} alt="telegram" /></a>
           <a target='blank' href="https://youtube.com/channel/UCO-kphng8ADTfvcwNq7A_6w"><img src={youtube} alt="youtube" /></a>
           <a target='blank' href='https://www.instagram.com/elonbering_uz'><img src={instagram} alt="instagram" /></a>
-          <a target="blank" href="https://www.facebook.com/profile.php?id=100082467521287"><img src={facebook} alt="" /></a>
+          {/* <a target="blank" href="https://www.facebook.com/profile.php?id=100082467521287"><img src={facebook} alt="" /></a> */}
+          <p>tiktok</p>
         </div>
         {/* <a className='hdr_phoneNumber' href="tel:+998939119572">+998939119572</a> */}
       </div>
