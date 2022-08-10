@@ -1,0 +1,167 @@
+.houses {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  background-color: rgb(94, 2, 71);
+}
+
+.housesContainer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content:space-evenly;
+  flex-wrap: wrap;
+  padding: 20px;
+  background-color: yellow;
+}
+
+.housesContainer_item {
+  width: 355px;
+  min-height: 400px;
+  height: auto;
+  background-color: #fff;
+  border-radius: 20px;
+  margin: 0px 20px 20px 0;
+  padding-bottom: 5px;
+}
+
+.housesContainer_item img {
+  width: 100%;
+  height: 210px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.housesContainer_item p {
+    padding: 0 10px;
+    margin:2px 0;
+    font-size: 21px;
+    display: flex;
+    align-items: center;
+}
+
+.housesContainer_item p svg,
+.housesContainer_item a svg  {
+    font-size: 22px;
+    color: rgb(185, 185, 185);
+    margin-right: 7px;
+}
+
+.housesContainer_item p:nth-child(4) svg{
+    font-size: 32px;
+}
+
+.housesContainer_item p b {
+  margin-left: 5px;
+}
+
+.housesContainer_item a{
+    padding-left: 10px;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.housesContainer_item p:last-child{
+    font-size: 18px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
+    color: #666;
+}
+
+
+@media screen and (max-width:1920px) {
+  .housesContainer_item {
+    width: 345px;
+    min-height: 400px;
+    border-radius: 20px;
+  }
+}
+
+@media screen and (max-width:1873px) {
+  .housesContainer_item {
+    width: 335px;
+    min-height: 400px;
+    border-radius: 20px;
+  }
+}
+
+@media screen and (max-width:1815px) {
+  .housesContainer_item {
+    width: 325px;
+    min-height: 400px;
+    border-radius: 20px;
+  }
+}
+
+@media screen and (max-width:1765px) {
+  .housesContainer_item {
+    width: 315px;
+    min-height: 400px;
+    border-radius: 20px;
+  }
+}
+
+@media screen and (max-width:1717px) {
+  .housesContainer_item {
+    width: 300px;
+    min-height: 380px;
+    border-radius: 20px;
+  }
+}
+
+@media screen and (max-width:1640px) {
+  .housesContainer_item {
+    width: 280px;
+    min-height: 360px;
+    border-radius: 15px;
+  }
+}
+
+@media screen and (max-width:1540px) {
+  .housesContainer_item {
+    width: 270px;
+    border-radius: 15px;
+  }
+
+  .housesContainer_item img {
+    width: 100%;
+    height: 170px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    margin-bottom: 0px;
+  }
+  
+  .housesContainer_item p {
+      margin:0px 0;
+      font-size: 19px;
+
+  }
+  
+  .housesContainer_item p svg,
+  .housesContainer_item a svg  {
+      font-size: 18px;
+      margin-right: 7px;
+  }
+  
+  .housesContainer_item p:nth-child(4) svg{
+      font-size: 32px;
+  }
+  
+  .housesContainer_item a{
+      padding-left: 10px;
+      text-decoration: none;
+      font-size: 19px;
+      font-weight: bold;
+  }
+  
+  .housesContainer_item p:last-child{
+      font-size: 14px;
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 10px;
+      color: #666;
+  }
+}

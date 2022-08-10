@@ -9,9 +9,12 @@ import Texnikalar from './routes/texnikalar/Texnikalar'
 import Admin from './routes/admin/Admin';
 import Mebellar from './routes/mebellar/Mebellar';
 import OziqOvqat from './routes/oziqOvqat/OziqOvqat'
+import Ishbor from './routes/ishbor/Ishbor'
 import Login from '../src/routes/login/Login'
+import BannerItemInfos from './components/bannerItemInfos/BannerItemInfos' 
 
 function App() {
+  console.log(window.innerWidth);
   return (
     <Router>
       <div className="app"> 
@@ -25,7 +28,9 @@ function App() {
           <Route path="/mebel" component={Mebellar} />
           <Route path="/oziqovqat" component={OziqOvqat} />
           <Route path="/admin" component={Admin} />
+          <Route path="/ishbor" component={Ishbor}/>
           <Route path="/login" component={Login}/>
+          <Route path="/infos" component={BannerItemInfos}/>
         </Switch>
       </div>
     </Router>

@@ -1,0 +1,69 @@
+.mobile{
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    background-color:wheat;
+}
+
+.mobileContainer{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.mobileContainer_item{
+    width: 293px;
+    height: 420px;
+    background-color: rgb(255, 255, 255);
+    margin: 0 20px 20px 0 ;
+    border-radius: 20px;
+}
+
+.mobileContainer_item img{
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    width: 100%;
+    height: 202px;
+    object-fit: contain;
+}
+
+.mobileContainer_item p {
+    padding: 0 10px;
+    margin:2px 0;
+    font-size: 21px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.mobileContainer_item p svg,
+.mobileContainer_item a svg  {
+    font-size: 22px;
+    color: rgb(185, 185, 185);
+    margin-right: 7px;
+}
+
+.mobileContainer_item p:nth-child(4) svg{
+    font-size: 32px;
+}
+
+.mobileContainer_item p b {
+  margin-left: 5px;
+}
+
+.mobileContainer_item a{
+    padding-left: 10px;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.mobileContainer_item p:last-child{
+    font-size: 18px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
+    color: #666;
+}
+

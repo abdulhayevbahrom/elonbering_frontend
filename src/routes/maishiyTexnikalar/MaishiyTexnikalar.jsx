@@ -1,49 +1,27 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import Header from '../../components/header/Header'
 import './MaishiyTexnkalar.css'
-// import {allData} from '../../data/data'
-import axios from 'axios'
-import loader from '../../assets/loader.svg'
+import {maishiyData} from '../../data/maishiyData'
+import {FaDollarSign} from 'react-icons/fa' 
+import {ImPhone} from 'react-icons/im'
+import Footer from '../../components/footer/Footer'
+
 
 function MaishiyTexnikalar() {
-    const [allData, setAllData] = useState([])
-
-    useEffect(() => {
-        axios.get('http://localhost:7000/create/baza/maishiy')
-            .then(res => setAllData(res.data.reverse()))
-            .catch(err => console.log(err))
-    }, [])
     return (
-        <div>
+        <div className='maishiyTenikalar'>
             <Header />
-            <div className='banner' style={!allData.length ? { background: "#fff" } : { background: "#c2c2c2" }}>
-                <div className="banner_container">
-                    {!allData.length ? <img src={loader} alt="" /> :
-                        allData.map((product, index) =>
-                            <div key={index} className="banner_item">
-                                <div className="banner_item_photo">
-                                    <img src={product.img} alt="avto" title={product.name} />
-                                </div>
-                                <div className="banner_item_info">
-                                    <p style={product.name.length >= 14 ? { fontSize: '14px' } : { fontSize: '16px' }} className='avtomobileName'>Nomi: <b>{product.name.split()[0].toLocaleUpperCase()} </b></p>
-                                    {product.color ?
-                                        <p className='avtomobileColor'>Rangi: <b>{product.color}</b></p>
-                                        : <></>
-                                    }
-                                    {product.year ?
-                                        <p className='avtomobileYear'>Yili: <b>{product.year}</b></p>
-                                        : <></>
-                                    }
-                                    <p className='productPrice'>Narxi: <b>{product.price}</b></p>
-                                    <p className='authorNumber'>Tel: <b>+998{product.phoneNumber}</b></p>
-                                    <p className="item_date">
-                                        {[...product?.date].splice(0, [...product?.date].indexOf("T")).join("")}
-                                    </p>
-                                </div>
-                            </div>
-                        )}
-                </div>
+            <div className="maishiyTexnikalar_container">
+                {maishiyData.map(maishiyTex_item =>
+                    <div className="maishiyTexnikalar_container_item">  
+                        <img src={maishiyTex_item.img} alt="" />
+                        <p><FaDollarSign/> Narxi: <b>{maishiyTex_item.price}</b></p>
+                        <a href={`tel:${maishiyTex_item.phoneNumber}`}><ImPhone/> +998{maishiyTex_item.phoneNumber}</a>
+                        <p><span>04-08-2022</span></p>
+                    </div> 
+                    )}
             </div>
+            <Footer/>
         </div>
     )
 }

@@ -1,49 +1,32 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Header from '../../components/header/Header'
+import Footer from '../../components/footer/Footer'
 import './Houses.css'
-// import {allData} from '../../data/data'
-import axios from 'axios'
-import loader from '../../assets/loader.svg'
+import { houses } from '../../data/houseData'
+
+import { ImPhone } from 'react-icons/im'
+import {FaDollarSign, FaHome} from 'react-icons/fa' 
+import {BsFillGrid1X2Fill} from 'react-icons/bs'
+import {FaMapMarkerAlt} from 'react-icons/fa'
 
 function Houses() {
-    const [allData, setAllData] = useState([])
-
-    useEffect(() => {
-        axios.get('http://localhost:7000/create/baza/uyjoy')
-            .then(res => setAllData(res.data.reverse()))
-            .catch(err => console.log(err))
-    }, [])
     return (
         <div className='houses'>
             <Header />
-            <div className='banner' style={!allData.length ? {background:"#fff"} : {background:"#c2c2c2"}}>
-            <div className="banner_container">
-                {!allData.length ? <img src={loader} alt="" />  : 
-                        allData.map((product, index) =>
-                            <div key={index} className="banner_item">
-                                <div className="banner_item_photo">
-                                    <img src={product.img} alt="avto" title={product.name} />
-                                </div>
-                                <div className="banner_item_info">
-                                    <p style={product.name.length >= 14 ? { fontSize: '14px' } : { fontSize: '16px' }} className='avtomobileName'>Nomi: <b>{product.name.split()[0].toLocaleUpperCase()} </b></p>
-                                    {product.color ?
-                                        <p className='avtomobileColor'>Rangi: <b>{product.color}</b></p>
-                                        : <></>
-                                    }
-                                    {product.year ?
-                                        <p className='avtomobileYear'>Yili: <b>{product.year}</b></p>
-                                        : <></>
-                                    }
-                                    <p className='productPrice'>Narxi: <b>{product.price}</b></p>
-                                    <p className='authorNumber'>Tel: <b>+998{product.phoneNumber}</b></p>
-                                    <p className="item_date">
-                                        {[...product?.date].splice(0, [...product?.date].indexOf("T")).join("")}
-                                    </p>
-                                </div>
-                            </div>
-                        )}
+            <div className="housesContainer">
+                {houses.map(houseItem => 
+                <div className="housesContainer_item"> 
+                    <img src={houseItem.img} alt="" />
+                    <p><FaHome/> Maydoni: <b> {houseItem.maydoni} sotix</b></p>
+                    <p><BsFillGrid1X2Fill/> Xonalar soni: <b>{houseItem.xonalarSoni} ta</b></p>
+                    <p><FaMapMarkerAlt className='house_location'/> Manzil:<b> {houseItem.manzili}</b></p>
+                    <p><FaDollarSign/> Narxi:<b> {houseItem.narxi} <FaDollarSign/></b></p>
+                    <a href={`tel:${houseItem.telefon}`}><ImPhone/> +998{houseItem.telefon}</a>
+                    <p><span>04-08-2022</span></p>
                 </div>
+           )}
             </div>
+            <Footer/>
         </div>
     )
 }
