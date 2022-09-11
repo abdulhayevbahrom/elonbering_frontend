@@ -7,4 +7,6 @@
 .app{
   width: 1920px;
   margin: auto;
+  padding: 0 20px;
+  background-color: blue;
 }
