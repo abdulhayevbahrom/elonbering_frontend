@@ -14,6 +14,7 @@ import xizmatTex from '../../assets/xizmatTex.png'
 import oziqOvqat from '../../assets/oziqOvqat.png'
 import mebellar from '../../assets/mebellar2.jfif'
 import ishbor from '../../assets/iahbor.jfif'
+import {FaUser} from 'react-icons/fa'
 import {IoGrid} from 'react-icons/io5' 
 
 
@@ -28,6 +29,7 @@ function Header() {
           <b>Keng tarmoqli <br className='hdr_br' /> Tez bozor</b>
         </div>
         <div className="hdr_sociall_networks">
+          <Link to="/login"><FaUser className='hdr_regsiter'/></Link>
           <a target='blank' href="https://t.me/elonbering_uz">
             <img src={tg} alt="telegram" />
           </a>

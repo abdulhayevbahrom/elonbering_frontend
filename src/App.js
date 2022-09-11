@@ -12,6 +12,7 @@ import OziqOvqat from './routes/oziqOvqat/OziqOvqat'
 import Ishbor from './routes/ishbor/Ishbor'
 import Login from '../src/routes/login/Login'
 import BannerItemInfos from './components/bannerItemInfos/BannerItemInfos' 
+import Register from './routes/register/Register'
 
 function App() {
   console.log(window.innerWidth);
@@ -31,6 +32,7 @@ function App() {
           <Route path="/ishbor" component={Ishbor}/>
           <Route path="/login" component={Login}/>
           <Route path="/infos" component={BannerItemInfos}/>
+          <Route path="/register" component={Register}/>
         </Switch>
       </div>
     </Router>

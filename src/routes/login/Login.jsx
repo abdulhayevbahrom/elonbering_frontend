@@ -14,11 +14,10 @@ function Login() {
     const LOGIN = (e) => {
         e.preventDefault()
         if(email === "elonbering.uz" && password === '0896'){
-            history.push("/admin/create")
-            
+            history.push("/admin/create")            
         }
-
     }
+    
     return (
         <div className='login'>
             <form className='loginForm' onSubmit={LOGIN}>
