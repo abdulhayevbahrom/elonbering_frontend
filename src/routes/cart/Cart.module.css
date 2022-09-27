@@ -1,0 +1,21 @@
+.empty_cart{
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.empty_cart img{
+    width: 550px;
+}
+
+.purchase_btn{
+    width: 200px;
+    height: 45px;
+    background-color: #000;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+}
+

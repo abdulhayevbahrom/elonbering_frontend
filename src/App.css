@@ -4,9 +4,8 @@
   box-sizing: border-box;
 }
 
+
 .app{
-  width: 1920px;
+  /* width: 1920px; */
   margin: auto;
-  padding: 0 20px;
-  background-color: blue;
 }
