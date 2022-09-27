@@ -1,10 +1,13 @@
 import React from 'react'
-import './Home.css'
+import BannerCarousel from '../../components/bannerCarousel/BannerCarousel'
+import Footer from '../../components/footer/Footer'
+
 
 function Home() {
   return (
     <div className='home'>
-      <h1>Hello</h1>
+      <BannerCarousel/>
+      <Footer/>
     </div>
   )
 }
