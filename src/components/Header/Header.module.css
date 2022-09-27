@@ -1,0 +1,88 @@
+.header{
+    width: 72.3%;
+    height: 60%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+.logo{
+    width: 236px;
+    flex: 1;
+    color: #fff;
+}
+
+.searchbar{
+    width: 606px;
+    height: 47px;
+    background-color: #fff;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left:2%;
+}
+.searchbar input{
+    width: 80%;
+    margin-left: 30px;
+    font-size: 14px;
+    border: none;
+    outline: none;
+}
+
+.searchbar input::placeholder{
+    color: rgb(163, 161, 161);
+    font-size: 16px;
+}
+
+.searchbar_search{
+    width: 73px;
+    height: 43px;
+    background-color: #EB1537;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    margin-right: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.searchbar_search svg{
+    color: #fff;
+    font-size: 28px;
+}
+
+.header_box_wrapper{
+    width: 407px;
+    height: 56px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 35px;
+    margin-left: 6%;
+}
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 18px;
+    position: relative;
+}
+.box p{
+    color: #fff;
+    margin: 5px 0px;
+    cursor: pointer;
+}
+
+.box span{
+    color: #fff;
+    position: absolute;
+    top: -15px;
+    right: 10px;
+    padding: 1px 5px;
+    background-color: #EB1537;
+    border-radius: 30px;
+}
+
+
+

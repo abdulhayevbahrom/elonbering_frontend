@@ -4,10 +4,10 @@
   box-sizing: border-box;
 }
 
-.app {
+/* .app {
   max-width: 1920px;
   margin: auto;
-}
+} */
 
 *::-webkit-scrollbar {
   width: 10px;
@@ -21,4 +21,9 @@
 *::-webkit-scrollbar-thumb {
   background: #444; 
   border-radius: 10px;
+}
+
+.app{
+  /* width: 1920px; */
+  margin: auto;
 }

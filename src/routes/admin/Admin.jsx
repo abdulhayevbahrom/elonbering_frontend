@@ -1,30 +1,26 @@
 import React from 'react'
-import './Admin.css'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import Create from '../../components/create/Create'
-import AllProduct from '../../components/allProduct/AllProduct'
-import { NavLink, Link } from 'react-router-dom'
-import {useRouteMatch} from 'react-router-dom'
+import s from "./Admin.module.css"
+import { Switch, Route, Link } from 'react-router-dom'
+import CreateProducts from '../../components/createProduct/CreateProducts'
+import logo from "../../assets/logo.png"
 
+const Admin = () => {
 
-
-function Admin() {
-  const {url} = useRouteMatch() 
-    return (
-        <Router>
-            <div className='admin'>
-                <div className="adminNavbar">
-                    <Link  activestyle={{backgroundColor:"#000"}} className="admin_nav_Item" to="/">Home</Link>
-                    <NavLink activeStyle={{backgroundColor:"#000"}} className="admin_nav_Item" to={`${url}/create`}>Yangi</NavLink>
-                    <NavLink activestyle={{backgroundColor:"#000"}} className="admin_nav_Item" to={`${url}/allProduct`}>Barchasi</NavLink>
-                </div>
-                <Switch>
-                    <Route path={`${url}/create`} component={Create} />
-                    <Route path={`${url}/allproduct`} component={AllProduct} />
-                </Switch>
-            </div>
-        </Router>
-    )
+  return (
+    <div className={s.admin}>
+     <div className={s.adminLinks}>
+     <Link to="/">
+      <div className={s.logo}>
+      <img src={logo} alt="" />
+      </div></Link>
+     </div>
+      <div className={s.admin_content}>
+        <Switch>
+            <Route path="/admin/createProduct" component={CreateProducts}/>
+        </Switch>
+      </div>
+    </div>
+  )
 }
 
 export default Admin
