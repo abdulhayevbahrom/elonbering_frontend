@@ -1,5 +1,9 @@
 import person from "../assets/subheaderimages/person.svg"
 import compare from "../assets/subheaderimages/compare.svg"
+import spark from '../assets/spark.png'
+import home from '../assets/home.jfif'
+import qurilishMollari from '../assets/xoztovar.jfif'
+import chorva from '../assets/CHORVA.jfif'
 
 export const headerData = [
     { id:0,
@@ -19,9 +23,9 @@ export const headerData = [
 export const categoryData = [
     {
         id:0,
-        img:"https://olcha.uz/image/60x50/category/M90cCGAT8ARmlnxJzt5sH4cTD4eBUjWocRW36j69zghIlMA6leRkjL9mvoBr.png",
-        title:"Smartfon, telefon, gadjet",
-        link:"phone"
+        img:spark,
+        title:"Avtomashinalar",
+        link:"avtomobiles"
     },
     {
         id:1,
@@ -32,26 +36,26 @@ export const categoryData = [
     {
         id:2,
         img:"https://olcha.uz/image/60x50/category/LMk7YuQAzKqsUIBDfr4jRA2IEFsLPsyFkWAWFHYkwlQZ8WRVvWut5Heb8Dju.png",
-        title:"Noutbook, Printer,Komputerlar",
-        link: "laptop"
+        title:"Elektron jihozlar",
+        link: "electronics"
     },
     {
         id:3,
-        img:"https://olcha.uz/image/60x50/category/6zDy6H7NAKLmaIszRCYFLxiXDtZDvNapSNOmLkLZJUpuXpRTtEq98OC9gX5J.png",
-        title:"Televizor, foto-video va audio",
-        link: "tv"
+        img:home,
+        title:"Uy-joylar",
+        link: "houses"
     },
     {
         id:4,
         img:"https://olcha.uz/image/60x50/category/FwbLWc8SYnihYCcCTQzGbOCBgowRWJrt8SHh3pWKaVp8YwCfvs48I6Hc9oms.",
-        title:"Mebel",
+        title:"Mebellar",
         link:"mebel"
     },
     {
         id:5,
-        img:"https://olcha.uz/image/60x50/category/uSZ7ukWOhOGAavEsU53jITihn8GZwiqeCmnzaErWodbkagi99gq739isSfC2.png",
-        title:"Geymerlar uchun",
-        link:"gamer"
+        img:qurilishMollari,
+        title:"Qurilish mollari",
+        link:"xostovarlar"
     },
     {
         id:6,
@@ -61,8 +65,8 @@ export const categoryData = [
     },
     {
         id:7,
-        img:"https://olcha.uz/image/60x50/category/oACT4XAZ4raQLa0WSGelk0qgRnRurDnY8jpZaQiu5ftyAGh8LQyctUOCLbRf.",
-        title:"Barchasi ofis,uy va bog' uchun ",
-        link: "garden"
+        img:chorva,
+        title:"Chorva mollari",
+        link: "chorva"
     },
 ]

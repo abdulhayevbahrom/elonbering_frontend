@@ -1,81 +1,253 @@
-.subHeader{
-    width: 100%;
-    height: 40%;
-    border-bottom: 1px solid #68386B;
+.subHeader {
+  width: 100%;
+  height: 40%;
+  border-bottom: 1px solid #fff;
+  padding: 0 3%;
 }
 
-
-.sub_wrapper{
-    width: 72.2%;
-    height: 100%;   
-    margin: auto;
-    display: flex;
-    align-items: center;
-}
-.language{
-    display: flex;
-    align-items: center;
+.sub_wrapper {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
 }
 
-.language img{
-    width: 32px;
-    height: 24px;
+.language {
+  display: flex;
+  align-items: center;
 }
-.language p{
+
+.language img {
+  width: 45px;
+  height: 38px;
+}
+
+.language p {
+  color: #fff;
+  margin: 5px;
+  font-size: 23px;
+}
+
+.language svg {
+  color: #fff;
+  font-size: 25px;
+  margin-left: 2px;
+}
+
+.sub_buttons {
+  margin-left: 33px;
+  flex: 1;
+}
+
+.sub_buttons button:first-child {
+  margin-right: 20px;
+  background-color: #e92e2e;
+}
+
+.sub_buttons button {
+  padding: 0.6% 3%;
+  border-radius: 20px;
+  font-size: 23px;
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: #34d399;
+}
+.sub_collection {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.sub_collection li {
+  margin: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.sub_collection a {
+  font-size: 24px;
+  color: #fff;
+  font-weight: 600;
+  margin: 0 15px;
+}
+
+.sub_collection a svg {
+  animation: rotate 0.5s alternate infinite linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(-10deg);
+  }
+
+  to {
+    transform: rotate(10deg);
+  }
+}
+
+/* .call_btn {
+  font-size: 24px;
+  background-color: transparent;
+  border-radius: 10px;
+  color: #fff;
+  border: 2px solid #fff;
+  margin-left: 10px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.call_btn:hover {
+  background-color: #fff;
+  color: #000;
+} */
+
+@media screen and (max-width: 1440px) {
+  .language img {
+    width: 40px;
+    height: 33px;
+  }
+
+  .language p {
     color: #fff;
     margin: 5px;
-}
-.language svg{
-    color: #fff;
-    font-size: 12px;
-    margin-left: 2px;
+    font-size: 20px;
+  }
+
+  .language svg {
+    font-size: 20px;
+  }
+
+  .sub_buttons button {
+    padding: 1% 3%;
+    font-size: 20px;
+  }
+
+  .sub_collection li,
+  .sub_collection a {
+    font-size: 21px;
+  }
 }
 
-.sub_buttons{
-    margin-left: 33px;
+@media screen and (max-width: 1284px) {
+  .sub_collection li,
+  .sub_collection a {
+    margin: 0;
+    border-left: 2px solid #fff;
+    padding: 0 10px;
+  }
+
+  .sub_collection li:first-child {
+    border-left: none;
+  }
+
+  .sub_collection a span {
+    display: none;
+  }
+
+  .sub_buttons button {
+    font-size: 19px;
+  }
+
+  .language p {
+    margin: 5px;
+    font-size: 19px;
+  }
+
+  .language svg {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 1060px) {
+  .language img {
+    width: 35px;
+    height: 27px;
+  }
+
+  .language p {
+    font-size: 15px;
+  }
+
+  .language svg {
+    font-size: 15px;
+  }
+
+  .sub_buttons {
+    margin-left: 15px;
     flex: 1;
+  }
+
+  .sub_buttons button {
+    font-size: 15px;
+  }
+
+  .sub_collection li {
+    font-size: 16px;
+  }
 }
 
-.sub_buttons button:first-child{
-    width: 159px;
-    margin-right: 20px;
-    background-color: #EB1537;
-}
-
-.sub_buttons button{
-    width: 177px;
-    height: 44px;
-    border-radius: 30px;
-    font-size: 17px;
-    border: 2px solid #fff;
-    color: #fff;
-    background-color: #34D399;
-}
-.sub_collection{
+@media screen and (max-width: 840px) {
+  .sub_wrapper {
     display: flex;
-    align-items: center;
-    color: #fff;
+    justify-content: space-between;
+  }
+  .sub_buttons button:last-child {
+    display: none;
+  }
 }
-.sub_collection li{
-    margin: 12px;
-    font-size: 16px;
+
+/* ================= for phones ===================== */
+@media screen and (max-width:760px) {
+  .sub_buttons{
+    display: none;
+  }
+
+  .sub_collection{
+    display: none;
+  }
+
+  .subHeader{
+    border:none;
+    width: auto;
+    padding: 0;
+  }
 }
-.sub_collection h3{
-    font-size: 18px;
+
+@media screen and (max-width:710px) {
+  .language img {
+    width: 25px;
+    height: 21px;
+  }
+
+  .language p {
+    font-size: 12px;
+  }
+
+  .language svg {
+    font-size: 10px;
+  }
 }
-.call_btn{
-    width: 205px;
-    height: 44px;
-    font-size: 16px;
-    background-color: transparent;
-    border-radius: 10px;
-    color: #fff;
-    border: 2px solid #fff;
-    margin-left: 10px;
-    margin-right: 20px;
-    cursor: pointer;
+
+
+@media screen and (max-width:410px) {
+  .language p,
+  .language svg{
+    display: none;
+  }
 }
-.call_btn:hover{
-    background-color: #fff;
-    color: #000;
+
+@media screen and (max-width:390px) {
+    .language img{
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+    }
 }
+
+@media screen and (max-width:345px){
+  .language img{
+    width: 17px;
+    height: 17px;
+  }
+}
+

@@ -8,8 +8,8 @@ import Footer from '../../components/footer/Footer'
 function Home() {
   return (
     <div className='home'>
-      <BannerCarousel/>
       <Category/>
+      <BannerCarousel/>
       <Products/>
       <Footer/>
     </div>

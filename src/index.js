@@ -1,41 +1,39 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import {BrowserRouter} from "react-router-dom"
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import { BrowserRouter } from "react-router-dom";
 
-import rootReducer from "./context/reducer"
+import rootReducer from "./context/reducer";
 import { legacy_createStore as createStore } from "redux";
-import { Provider } from "react-redux"
+import { Provider } from "react-redux";
 
-import { persistStore, persistReducer } from 'redux-persist'
-import storage from 'redux-persist/lib/storage' 
-import { PersistGate } from 'redux-persist/integration/react'
-
+import { persistStore, persistReducer } from "redux-persist";
+import storage from "redux-persist/lib/storage";
+import { PersistGate } from "redux-persist/integration/react";
 
 const persistConfig = {
-  key: 'root',
+  key: "root",
   storage,
   blacklist: [],
-  whitelist: ["addToCart", "addToHeart"]
-}
+  whitelist: ["addToCart", "addToHeart"],
+};
 
-const persistedReducer = persistReducer(persistConfig, rootReducer)
-const store = createStore(persistedReducer)
-const persister = persistStore(store)
-
+const persistedReducer = persistReducer(persistConfig, rootReducer);
+const store = createStore(persistedReducer);
+const persister = persistStore(store);
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-    <Provider store={store}>
-      <PersistGate loading={null} persistor={persister}>
-        <BrowserRouter>
-          <App />
-        </BrowserRouter>
-      </PersistGate>
-    </Provider>
+      <Provider store={store}>
+        <PersistGate loading={null} persistor={persister}>
+          <BrowserRouter>
+            <App />
+          </BrowserRouter>
+        </PersistGate>
+      </Provider>
     </BrowserRouter>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
