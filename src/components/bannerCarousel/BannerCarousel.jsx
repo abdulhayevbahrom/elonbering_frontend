@@ -5,26 +5,25 @@ import "swiper/swiper.min.css";
 import "swiper/components/effect-coverflow/effect-coverflow.min.css";
 import "swiper/components/pagination/pagination.min.css";
 import "swiper/components/navigation/navigation.min.css";
-import { bannerCarousel_data } from '../../data/bannerCarousel_data';
+import { bannerCarousel_data } from '../../static/bannerCarousel_data';
 import SwiperCore, { EffectFade, Autoplay, Pagination, Navigation, } from "swiper";
 SwiperCore.use([EffectFade, Autoplay, Pagination, Navigation]);
 
 
 function BannerCarousel() {
     return (
-        <div className='BannerCarousel'>
             <Swiper
                 className='MainHeaderSwiperWrapper'
                 autoplay={{
-                    delay: 2500,
+                    delay: 3500,
                     disableOnInteraction: false,
                 }}
                 loop={true}
                 modules={[Navigation, Pagination]}
                 spaceBetween={50}
                 slidesPerView={1}
-                // navigation
-                // pagination={{ clickable: true }}
+                navigation
+                pagination={{ clickable: true }}
                 scrollbar={{ draggable: true }}
             >
                 {
@@ -36,7 +35,6 @@ function BannerCarousel() {
                 }
 
             </Swiper>
-        </div>
     )
 }
 

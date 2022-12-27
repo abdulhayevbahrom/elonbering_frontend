@@ -1,59 +1,51 @@
 import React from 'react'
-import s from "./Header.module.css"
-import { GoSearch } from "react-icons/go"
-import cartImage from "../../assets/subheaderimages/cart.svg"
-import heartImage from "../../assets/subheaderimages/heart.svg"
-import { useDispatch, useSelector } from "react-redux"
-import { headerData } from '../../static/static'
+import "./Header.css"
 import { Link } from 'react-router-dom'
-import { FaBars } from 'react-icons/fa'
-import { SIDEBAR_SHOW } from '../../context/action/actionTypes'
-
+import logo from '../../assets/logo (2).png'
+import { FaUser, FaHeart, FaShoppingCart } from 'react-icons/fa'
+import { IoLanguage } from 'react-icons/io5'
+import { useTypewriter} from 'react-simple-typewriter'
+import { useSelector } from 'react-redux'
 
 const Header = () => {
-  const dispatch = useDispatch()
-  const cart = useSelector(s => s.addToCart)
-  const heart = useSelector(s => s.addToHeart)
-
-  const sidebarShow = () => {
-    dispatch({ type: SIDEBAR_SHOW, payload: false })
-  }
+  const cart = useSelector(s=>s.addToCart)
+  const {text} = useTypewriter({
+    words: ["Damas", "Telefon", "Muzlatgich", "Uy", "Stol", "Sigir","Noutbook"],
+    loop: {Infinity},
+    // typeSpeed: {1000},
+    // deleteSpeed: {50},
+    // delaySpeed{1000}
+})
   return (
-    <div className={s.header}>
-      <FaBars className={s.header_bars_icon} onClick={sidebarShow} />
-      <Link to="/"><h1 className={s.logo}>{window.innerWidth > 656 ? "Elon Bering.uz" : "EB"}</h1></Link>
-      <div className={s.searchbar}>
-        <input autoFocus type="search" placeholder={window.innerWidth > 390 ? "Mahsulotni qidirish..." : "Qidirish..."} />
-        <div className={s.searchbar_search}>
-          <GoSearch />
-        </div>
-      </div>
-      <div className={s.header_box_wrapper}>
-        {
-          headerData?.map((i, inx) =>
-            <div key={inx} className={s.box}>
-              <Link to={`/${i.link}`}><img src={i.img} alt="" />
-              </Link>
-              <p>{i.title}</p>
-            </div>
-          )
-        }
-        <Link to="/heart">
-          <div className={s.box}>
-            <span>{heart && heart.length}</span>
-            <img src={heartImage} alt="" />
-            <p>Sevimlilar</p>
-          </div>
-        </Link>
-        <Link to="/cart">
-          <div className={s.box}>
-            <span>{cart && cart.length}</span>
-            <img src={cartImage} alt="" />
-            <p>Savatcha</p>
-          </div>
-        </Link>
-      </div>
+    <div className="header">
+      <Link to="/"><img src={logo} className="logo" alt="" /></Link>
 
+      <div className="header_searchbar">
+        <input type="text" placeholder={text} autoFocus />
+      </div>
+      <div className="header_links">
+        <label htmlFor="select" className='header_lang'>
+          <IoLanguage />
+          <select id='select'>
+            <option value="uz">uz</option>
+            <option value="ru">ru</option>
+            <option value="eng">eng</option>
+          </select>
+        </label>
+        <Link to='/login' className="header_links_item">
+          <FaUser />
+          <p>Login</p>
+        </Link>
+        <Link to="/heart" className="header_links_item">
+          <FaHeart />
+          <p>Sevimlilar</p>
+        </Link>
+        <Link to="/cart" className="header_links_item">
+          <span>{cart.length}</span>
+          <FaShoppingCart />
+          <p>Savat</p>
+        </Link>
+      </div>
     </div>
   )
 }

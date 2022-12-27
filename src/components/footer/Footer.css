@@ -1,7 +1,7 @@
 .footer {
   width: 100%;
   background-color: rgb(39, 39, 39);
-  padding: 50px 20px;
+  padding: 50px 20px 15px 20px;
   font-family: "roboto";
 }
 
@@ -15,13 +15,13 @@
 
 .footer_container_item {
   display: flex;
+  align-items:flex-start;
   flex-direction: column;
 }
 
-.footerLogo {
-  font-family: "roboto";
-  color: #fff;
-  font-size: 20px;
+.footerLogo img{
+  width: 270px;
+  transform: translateX(-10px);
 }
 
 .footer_phone p {

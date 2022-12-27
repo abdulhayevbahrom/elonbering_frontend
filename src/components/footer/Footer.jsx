@@ -2,21 +2,21 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './Footer.css'
 import { FaTelegram, FaYoutube, FaTiktok } from 'react-icons/fa'
-import { footerData } from '../../data/footerData'
+import { footerData } from '../../static/footerData'
 import { RiInstagramFill } from 'react-icons/ri'
+import logo from '../../assets/logo (2).png'
 
 function Footer() {
-    console.log(window.innerWidth);
     return (
         <div className='footer'>
             <div className="footer_container">
                 <div className="footer_container_item">
                     <div className="footerLogo">
-                        <h1>E'LON BERING.UZ</h1>
+                        <img src={logo} className="logo" alt="" />
                     </div>
                     <div className="footer_phone">
-                        <p>Muroja'at uchun</p>
-                        <a className='phoneNum' href="tel:+998942029122">+998(94) 202-91-22</a>
+                        <p>Muroja'at uchun:</p>
+                        <a className='phoneNum' href="tel:+998939119572">+998(93) 911-95-72</a>
                     </div>
                     <p className='tos'>Keng tarmoqli tez bozor.</p>
                 </div>

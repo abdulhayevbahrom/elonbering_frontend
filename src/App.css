@@ -1,10 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.app {
+.app{
   max-width: 1920px;
   margin: auto;
 }
