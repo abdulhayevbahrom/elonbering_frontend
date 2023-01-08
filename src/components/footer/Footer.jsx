@@ -2,11 +2,14 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './Footer.css'
 import { FaTelegram, FaYoutube, FaTiktok } from 'react-icons/fa'
-import { footerData } from '../../static/footerData'
 import { RiInstagramFill } from 'react-icons/ri'
 import logo from '../../assets/logo (2).png'
+import { useTranslation } from 'react-i18next'
+import Capitalize from '../../hooks/capitalize'
+import {Category} from '../../static/categories'
 
 function Footer() {
+    const { t } = useTranslation()
     return (
         <div className='footer'>
             <div className="footer_container">
@@ -15,21 +18,19 @@ function Footer() {
                         <img src={logo} className="logo" alt="" />
                     </div>
                     <div className="footer_phone">
-                        <p>Muroja'at uchun:</p>
+                        <p>{t("Murojaatuchun")}</p>
                         <a className='phoneNum' href="tel:+998939119572">+998(93) 911-95-72</a>
                     </div>
-                    <p className='tos'>Keng tarmoqli tez bozor.</p>
+                    <p className='tos'>{t("footer_tos")}</p>
                 </div>
-                {footerData?.map((item, index) =>
-                    <div key={index} className="footer_container_item">
-                        <h2>{item.caption}</h2>
-                        {item.links.map((item, index) =>
-                            <Link className='footer_links_item' key={index} to={item.route}>{item.name}</Link>
-                        )}
-                    </div>
-                )}
                 <div className="footer_container_item">
-                    <h2>Contact</h2>
+                    <h2>{t("toifalar")}</h2>
+                    {Category().slice(1, Category().length-1).map((item, index) =>
+                        <Link className='footer_links_item' key={index} to={item.link}>{Capitalize(item.title)}</Link>
+                    )}
+                </div>
+                <div className="footer_container_item">
+                    <h2>{t('boglanish')}</h2>
                     <div className="footer_social_networks">
                         <a target="_blank" rel="noreferrer" className='social_item' href="https://t.me/elonbering_uz"><FaTelegram />Telegram</a>
                         <a target="_blank" rel="noreferrer" className='social_item' href="https://www.instagram.com/elonbering_uz"><RiInstagramFill />Instagram</a>

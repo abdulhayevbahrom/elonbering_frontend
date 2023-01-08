@@ -6,7 +6,9 @@
     align-items: center;
     color: var(--main-bg);
     font-size: 20px;
-    margin-bottom: 25px;
+    margin: 20px 0 0 0;
+    padding: 20px 0 45px 2%;
+
 }
 
 .products_caption .hr{

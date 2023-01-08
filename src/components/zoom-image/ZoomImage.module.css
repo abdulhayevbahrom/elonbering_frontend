@@ -49,11 +49,11 @@
     height: 40px;
     border-radius: 50%;
     border: none;
-    font-size: 20px;
+    font-size: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--bg-py);
+    background: var(--main-bg);
     color: #fff;
     cursor: pointer;
     z-index: 2;

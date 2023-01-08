@@ -1,0 +1,25 @@
+.sevimlilar_wrapp{
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url(../../assets/bg.webp);
+    min-height: 70vh;
+    margin: 0  0 1% 0;
+}
+
+pre{
+    text-align: center;
+    margin:  15% auto;
+    color: var(--main-bg);
+}
+
+pre h1:nth-child(2){
+    margin-bottom: 10%;
+}
+
+pre a{
+    color:#fff;
+    padding:5px 10%;
+    font-size: 20px;
+    background-color: var(--main-bg);
+    border-radius:6px;
+}

@@ -1,0 +1,35 @@
+{
+    "-------- HEADER ---------":"",
+    "login": "Войти",
+    "sevimlilar": "Избранное",
+    "savat": "Корзина",
+
+    "------SEARCH INPUT PLACEHOLDER---------":"",
+    "Damas":"Дамас",
+    "Telefon":"Tелефон",
+    "Muzlatgich":"Холодильник",
+    "Uy":"Дом",
+    "Stol":"Стол",
+    "Sigir":"Корова",
+    "Noutbook":"Ноутбук",
+
+    "------Categories-----------":"",
+    "Barchasi":"Все",
+    "Avtomobillar":"Aвтомобили",
+    "MaishiyTexnika":"Бытовая техника",
+    "Elektronjihozlar":"Электроника",
+    "Houses":"Дома",
+    "Mebellar":"Мебель",
+    "QurilishMollari":"Строительные материалы",
+    "Chorvamollari":"Скот",
+
+    "------BANNER PRODUCTS_CAPTION---------":"",
+    "Barchamahsulotlar":"Все продукты",
+
+    "------FOOTER---------":"",
+    "Murojaatuchun":"Для справки:",
+    "footer_tos":"Широкополосный быстрый рынок.",
+    "toifalar":"Категории",
+    "boglanish":"Связь"
+
+}

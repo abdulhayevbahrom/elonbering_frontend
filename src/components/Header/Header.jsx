@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState , memo} from 'react'
 import "./Header.css"
 import { Link } from 'react-router-dom'
 import logo from '../../assets/logo (2).png'
@@ -7,15 +7,26 @@ import { IoLanguage } from 'react-icons/io5'
 import { useTypewriter} from 'react-simple-typewriter'
 import { useSelector } from 'react-redux'
 
+import { useTranslation } from "react-i18next";
+
 const Header = () => {
+  const [lang,setLang] = useState(localStorage.getItem("lang") || "uz") 
+  const {t} = useTranslation();
+  const { i18n } = useTranslation();
   const cart = useSelector(s=>s.addToCart)
   const {text} = useTypewriter({
-    words: ["Damas", "Telefon", "Muzlatgich", "Uy", "Stol", "Sigir","Noutbook"],
+    words: [t("Damas"), t("Telefon"), t("Muzlatgich"), t("Uy"), t("Stol"), t("Sigir"), t("Noutbook")],
     loop: {Infinity},
     // typeSpeed: {1000},
     // deleteSpeed: {50},
     // delaySpeed{1000}
 })
+
+
+useEffect(()=>{
+    i18n.changeLanguage(lang)
+},[lang])
+
   return (
     <div className="header">
       <Link to="/"><img src={logo} className="logo" alt="" /></Link>
@@ -26,28 +37,28 @@ const Header = () => {
       <div className="header_links">
         <label htmlFor="select" className='header_lang'>
           <IoLanguage />
-          <select id='select'>
+          <select value={lang} id='select' onChange={(e)=>setLang(e.target.value)}>
             <option value="uz">uz</option>
             <option value="ru">ru</option>
-            <option value="eng">eng</option>
+            <option value="en">eng</option>
           </select>
         </label>
         <Link to='/login' className="header_links_item">
           <FaUser />
-          <p>Login</p>
+          <p>{t("login")}</p>
         </Link>
         <Link to="/heart" className="header_links_item">
           <FaHeart />
-          <p>Sevimlilar</p>
+          <p>{t("sevimlilar")}</p>
         </Link>
         <Link to="/cart" className="header_links_item">
-          <span>{cart.length}</span>
+         { cart.length  ? <span>{cart.length}</span> : <></>}
           <FaShoppingCart />
-          <p>Savat</p>
+          <p>{t("savat")}</p>
         </Link>
       </div>
     </div>
   )
 }
 
-export default Header
+export default memo(Header)

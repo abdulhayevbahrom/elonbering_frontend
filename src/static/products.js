@@ -16,23 +16,25 @@ import qoy from './productImages/qoy.jpg'
 export const products = [
     {
         id: 0,
-        title: "Cobalt",
+        title: "cobalt damas tico nexia",
         price: 125000,
-        location: "Tashkent",
-        images: [cobalt, cobalt, cobalt, cobalt],
+        location: "tashkent",
+        images: [cobalt, damas, wash, reyka],
         rangi: "oq",
         yurgan: 52000,
-        phoneNumber: "+998949111180"
+        phoneNumber: "+998949111180",
+        category:"avtomobiles"
     },
     {
         id: 1,
-        title: "Damas",
+        title: "damas",
         price: 135000,
-        location: "Tashkent",
+        location: "tashkent",
         images:[damas,damas,damas,damas],
         rangi: "oq",
         yurgan: 45000,
-        phoneNumber: "+998949111180"
+        phoneNumber: "+998949111180",
+        category:"avtomobiles"
     },
     {
         id: 2,
@@ -41,7 +43,8 @@ export const products = [
         location: "Namangan",
         images:[wash,wash,wash,wash],
         rangi: "oq",
-        phoneNumber: "+998949111180"
+        phoneNumber: "+998949111180",
+        category:"appliances"
     },
     {
         id: 3,
@@ -50,7 +53,8 @@ export const products = [
         location: "Namangan",
         images:[wash2,wash2,wash2,wash2],
         rangi: "oq",
-        phoneNumber: "+998949111180"
+        phoneNumber: "+998949111180",
+        category:"appliances"
     },
     {
         id: 4,
@@ -59,7 +63,8 @@ export const products = [
         location: "Namangan",
         images:[tel, tel, tel, tel],
         rangi: "oq",
-        phoneNumber: "+998949111180"
+        phoneNumber: "+998949111180",
+        category:"electronics"
     },
     {
         id: 5,
@@ -68,7 +73,8 @@ export const products = [
         location: "Namangan",
         images:[tel2, tel2, tel2, tel2],
         rangi: "oq",
-        phoneNumber: "+998949111180"
+        phoneNumber: "+998949111180",
+        category:"electronics"
     },
     {
         id: 6,
@@ -77,7 +83,8 @@ export const products = [
         location: "Namangan",
         images:[u, u, u, u],
         rangi: "oq",
-        phoneNumber: "+998949111180"
+        phoneNumber: "+998949111180",
+        category:"houses"
     },
     {
         id: 7,
@@ -86,7 +93,8 @@ export const products = [
         location: "Namangan",
         images:[hovli,hovli, hovli, hovli],
         rangi: "oq",
-        phoneNumber: "+998949111180"
+        phoneNumber: "+998949111180",
+        category:"houses"
     },
     {
         id: 8,
@@ -95,7 +103,8 @@ export const products = [
         location: "Namangan",
         images:[divan,divan, divan, divan],
         rangi: "oq",
-        phoneNumber: "+998949111180"
+        phoneNumber: "+998949111180",
+        category:"mebels"
     },
     {
         id: 9,
@@ -104,7 +113,8 @@ export const products = [
         location: "Namangan",
         images:[divan2,divan2, divan2, divan2],
         rangi: "oq",
-        phoneNumber: "+998949111180"
+        phoneNumber: "+998949111180",
+        category:"mebels"
     },
     {
         id: 10,
@@ -113,7 +123,8 @@ export const products = [
         location: "Namangan",
         images:[reyka , reyka, reyka, reyka],
         materialType:"terak",
-        phoneNumber: "+998949111180"
+        phoneNumber: "+998949111180",
+        category:"xostovarlar"
     },
     {
         id: 11,
@@ -122,7 +133,8 @@ export const products = [
         location: "Namangan",
         images:[strapil , strapil, strapil, strapil],
         materialType:"Qarag'ay",
-        phoneNumber: "+998949111180"
+        phoneNumber: "+998949111180",
+        category:"xostovarlar"
     },
     {
         id: 12,
@@ -130,7 +142,8 @@ export const products = [
         price: 12000000,
         location: "Namangan",
         images:[sigir , sigir, sigir, sigir],
-        phoneNumber: "+998949111180"
+        phoneNumber: "+998949111180",
+        category:"chorva"
     },
     {
         id: 13,
@@ -138,8 +151,7 @@ export const products = [
         price: 210000,
         location: "Namangan",
         images:[qoy , qoy, qoy, qoy],
-        phoneNumber: "+998949111180"
+        phoneNumber: "+998949111180",
+        category:"chorva"
     }
-    
-    
 ]

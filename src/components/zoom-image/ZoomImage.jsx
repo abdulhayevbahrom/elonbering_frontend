@@ -3,7 +3,7 @@ import s from "./ZoomImage.module.css";
 import { BsChevronRight, BsChevronLeft } from "react-icons/bs";
 import { FiX } from "react-icons/fi";
 
-function ZoomImage({ urls, setZoom }) {
+function ZoomImage({images, setZoom }) {
   const [index, setIndex] = useState(0);
   return (
     <div className={s.zoom_image}>
@@ -18,9 +18,9 @@ function ZoomImage({ urls, setZoom }) {
         >
           <BsChevronLeft title="left" />
         </button>
-        <img src={urls[index]} alt="" />
+        <img src={images[index]} alt="" />
         <button
-          disabled={urls.length - 1 <= index}
+          disabled={images.length - 1 <= index}
           onClick={() => setIndex((p) => p + 1)}
           className={s.zoom_controller}
         >

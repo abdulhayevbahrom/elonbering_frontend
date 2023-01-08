@@ -1,0 +1,34 @@
+{
+    "-------- HEADER ---------":"",
+    "login":"Kirish",
+    "sevimlilar":"Sevimlilar",
+    "savat":"Savat",
+
+    "------SEARCH INPUT PLACEHOLDER---------":"",
+    "Damas":"Damas",
+    "Telefon":"Telefon",
+    "Muzlatgich":"Muzlatgich",
+    "Uy":"Uy",  
+    "Stol":"Stol",
+    "Sigir":"Sigir",
+    "Noutbook":"Noutbook",
+
+    "------Categories-----------":"",
+    "Barchasi":"Barchasi",
+    "Avtomobillar":"Avtomobillar",
+    "MaishiyTexnika":"Maishiy Texnika",
+    "Elektronjihozlar":"Elektron jihozlar",
+    "Uyjoylar":"Uy-joylar",
+    "Mebellar":"Mebellar",
+    "QurilishMollari":"Qurilish mollari",
+    "Chorvamollari":"Chorva mollari",
+
+    "------BANNER PRODUCTS_CAPTION---------":"",
+    "Barchamahsulotlar":"Barcha mahsulotlar",
+
+    "------FOOTER---------":"",
+    "Murojaatuchun":"Muroja'at uchun:",
+    "footer_tos":"Keng tarmoqli tez bozor.",
+    "toifalar":"Toifalar",
+    "boglanish":"Bog'lanish"
+}

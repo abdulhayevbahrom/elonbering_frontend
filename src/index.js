@@ -1,9 +1,11 @@
-import React from "react";
+import React, {Suspense} from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
+import './language/i18next'
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
-
+import Loader from "./components/loader/Loader";
+import { } from "number-brm"
 
 import rootReducer from "./context/reducer";
 import { legacy_createStore as createStore } from "redux";
@@ -30,7 +32,9 @@ ReactDOM.render(
       <Provider store={store}>
         <PersistGate loading={null} persistor={persister}>
           <BrowserRouter>
+          <Suspense fallback={<Loader/>}>
             <App />
+          </Suspense>
           </BrowserRouter>
         </PersistGate>
       </Provider>

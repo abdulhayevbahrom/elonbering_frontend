@@ -1,42 +1,47 @@
-export const categories = [
+import { useTranslation } from "react-i18next" 
+
+export const Category = ()=> {
+    const {t} = useTranslation()
+    return[
     {
         id: 0,
-        title: "Barchasi",
+        title: t("Barchasi"),
         link: "/"
     },
     {
         id: 1,
-        title: "Avtomobillar",
-        link: "avtomobiles"
+        title: t("Avtomobillar"),
+        link: "/avtomobiles"
     },
     {
         id: 2,
-        title: "Maishiy Texnika",
-        link: "appliances"
+        title: t("MaishiyTexnika"),
+        link: "/appliances"
     },
     {
         id: 3,
-        title: "Elektron jihozlar",
-        link: "electronics"
+        title: t("Elektronjihozlar"),
+        link: "/electronics"
     },
     {
         id: 4,
-        title: "Uy-joylar",
-        link: "houses"
+        title: t("Uyjoylar"),
+        link: "/houses"
     },
     {
         id: 5,
-        title: "Mebellar",
-        link: "mebels"
+        title: t("Mebellar"),
+        link: "/mebels"
     },
     {
         id: 6,
-        title: "Qurilish mollari",
-        link: "xostovarlar"
+        title: t("QurilishMollari"),
+        link: "/xostovarlar"
     },
     {
         id: 7,
-        title: "Chorva mollari",
-        link: "chorva"
+        title: t("Chorvamollari"),
+        link: "/chorva"
     },
 ]
+}

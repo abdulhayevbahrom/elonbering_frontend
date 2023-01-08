@@ -1,0 +1,370 @@
+.cart {
+    width: 100%;
+}
+
+.cart_wrapper {
+    display: flex;
+    justify-content: space-between;
+    background-image: url(../../assets/bg.webp);
+    min-height: 90vh;
+    padding: 0 2%;
+}
+
+.cart_products {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.cart_wrapper_item {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #Fff;
+    margin: 10px 0;
+    border-radius: 10px;
+    padding: 0 2%;
+    border: 1px solid var(--main-bg);
+
+}
+
+.cart_wrapper_item img {
+    width: 150px;
+    height: 115px;
+    border-radius: 10px;
+    background-color: transparent;
+    object-fit: contain;
+}
+
+.cart_wrapper_item_qty {
+    border: 1px solid var(--main-bg);
+    border-radius: 6px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+}
+
+.cart_wrapper_item_title {
+    line-height: 1.3;
+    width: 40%;
+}
+
+.cart_wrapper_item_title p:first-child {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.cart_wrapper_item_title p:nth-child(2),
+.cart_wrapper_item_title p:last-child,
+.cart_wrapper_item_title p:last-child a {
+    color: #7c7c7c;
+}
+
+.cart_wrapper_item_title p:nth-child(2) span,
+.cart_wrapper_item_title p:last-child span {
+    font-weight: 100;
+}
+
+.cart_wrapper_item_qty button {
+    width: 27px;
+    height: 27px;
+    padding: 4px;
+    margin: 0 10px;
+    border-radius: 20px;
+    display: grid;
+    place-items: center;
+    border: none;
+    background-color: var(--main-bg);
+    cursor: pointer;
+    color: #Fff;
+}
+
+.cart_wrapper_item_qty button:disabled {
+    opacity: 0.4;
+    cursor: no-drop;
+}
+
+.cart_wrapper_item_bnts svg {
+    color: var(--main-bg);
+    font-size: 22px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.cart_wrapper_item_bnts svg:first-child {
+    font-size: 25px;
+}
+
+.cart_wrapper_item_bnts svg:last-child {
+    color: #f00;
+}
+
+.cart_wrapper_item_bnts svg:active {
+    transform: scale(.9);
+}
+
+.cart_total_info {
+    width: 22%;
+    height: 250px;
+    background-color: #fff;
+    border: 1px solid var(--main-bg);
+    border-radius: 8px;
+    margin: 60px 30px 0 0;
+    padding: 15px;
+}
+
+.cart_total_info h3 {
+    font-size: 21px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cart_total_info p {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.5;
+}
+
+.cart_total_info .cleareCart {
+    background-color: rgb(226, 33, 33);
+    color: #fff;
+    border: none;
+    width: 100%;
+    padding: 7px 0;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 80px;
+}
+
+.cart_total_info .cleareCart:active {
+    transform: scale(0.99);
+}
+
+
+.empty_cart_wrapper {
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.empty_cart_wrapper img {
+    width: 400px;
+}
+
+.empty_cart_wrapper a {
+    color: #fff;
+    background-color: #1E64E8;
+    padding: 7px 30px;
+    margin-top: 40px;
+    transform: translateX(20px);
+    font-size: 20px;
+    border-radius: 6px;
+}
+
+
+
+/* --------------------------- */
+
+.cart_wrapper_dell {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #0009;
+}
+
+.deleteBTN {
+    padding: 5px 17px;
+    color: #fff;
+    background-color: red;
+    border-radius: 5px;
+    border: none;
+    font-size: 19px;
+}
+
+.delete_notification {
+    width: 600px;
+    height: 350px;
+    background-color: #fff;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10% auto;
+    /* box-shadow:-1px 1px 10px 2px rgb(231, 231, 231); */
+    transform-origin: top;
+    transition: 0.2s;
+    animation: delete_modal 1s alternate;
+}
+
+.delete_notification p {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.delete_notification .delete_notification_btns {
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-between;
+    width: 45%;
+}
+
+.delete_notification .delete_notification_btns button {
+    padding: 7px 28px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.delete_notification .delete_notification_btns button:active {
+    transform: scale(0.95);
+    transition: 0.2s;
+}
+
+
+.delete_notification .delete_notification_btns button:first-child {
+    background-color: rgb(8, 233, 8);
+}
+
+.delete_notification .delete_notification_btns button:last-child {
+    background-color: #f00;
+}
+
+
+@keyframes delete_modal {
+    from {
+        margin: 10% auto;
+    }
+
+    from {
+        margin: 0 auto;
+    }
+}
+
+.delete_no {
+    display: none;
+}
+
+
+
+
+@media screen and (max-width:1400px) {
+    .delete_notification {
+        width: 500px;
+        height: 300px;
+    }
+
+    .delete_notification p {
+        font-size: 22px;
+    }
+
+    .delete_notification .delete_notification_btns {
+        width: 52%;
+    }
+
+
+    .delete_notification .delete_notification_btns button {
+        padding: 5px 22px;
+        font-size: 21px;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .delete_notification {
+        width: 410px;
+        height: 240px;
+        border-radius: 15px;
+    }
+
+    .delete_notification p {
+        font-size: 17px;
+    }
+
+    .delete_notification .delete_notification_btns {
+        width: 52%;
+    }
+
+
+    .delete_notification .delete_notification_btns button {
+        padding: 5px 22px;
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .delete_notification {
+        width: 310px;
+        height: 180px;
+        border-radius: 10px;
+    }
+
+    .delete_notification p {
+        font-size: 14px;
+    }
+
+    .delete_notification .delete_notification_btns {
+        width: 52%;
+    }
+
+
+    .delete_notification .delete_notification_btns button {
+        padding: 3px 15px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .delete_notification {
+        width: 270px;
+        height: 150px;
+        border-radius: 5px;
+    }
+
+    .delete_notification p {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .delete_notification .delete_notification_btns {
+        width: 52%;
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width:350px) {
+    .delete_notification {
+        width: 240px;
+        height: 130px;
+        border-radius: 5px;
+    }
+
+    .delete_notification p {
+        font-size: 13px;
+        text-align: center;
+        padding: 0 10%;
+    }
+
+    .delete_notification .delete_notification_btns {
+        width: 62%;
+        margin-top: 30px;
+    }
+
+    .delete_notification .delete_notification_btns button {
+        padding: 3px 15px;
+        font-size: 11px;
+    }
+}

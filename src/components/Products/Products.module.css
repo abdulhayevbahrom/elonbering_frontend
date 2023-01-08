@@ -67,3 +67,6 @@
     transform: scale(.9);
 }
 
+.products_item_phoneNumber svg{
+    font-size: 31px;
+}

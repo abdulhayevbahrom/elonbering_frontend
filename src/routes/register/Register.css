@@ -1,0 +1,46 @@
+.register{
+    width: 100%;
+    height: 100vh;
+    background-color:#262139;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.register_caption{
+    font-weight: normal;
+}
+
+.register_form{
+    width: 30%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2%;
+}
+
+.register_form input{
+    outline: none;
+    border: 1px solid #ddd;
+    width: 50%;
+    height: 33px;
+    background-color: transparent;
+    margin:2% 0;
+    text-indent: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.register_form input::placeholder{
+    color: rgb(168, 168, 168);
+}
+
+.register_form input[type=submit]{
+    background-color: dodgerblue;
+    cursor: pointer;
+    border: none;
+}
