@@ -24,9 +24,9 @@ const Products = () => {
     return AddToHeart(item, dispatch, toast)
   }
 
-  // function REMOVE_FROM_HEART(item) {
-  //   return RemoveFromHeart(item, dispatch, toast)
-  // }
+  function REMOVE_FROM_HEART(item) {
+    return RemoveFromHeart(item, dispatch, toast)
+  }
 
   function ADD_TO_CART(item) {
    return AddToCart(item, cart, dispatch, toast)
@@ -48,7 +48,7 @@ const Products = () => {
               <div className={s.products_item_btns}>
                 <FaCartPlus onClick={() => ADD_TO_CART(item)} />
                 {
-                  heart.some(i => i === item.id) ? <AiFillHeart onClick={() => ADD_TO_HEART(item)} /> : <BiHeart onClick={()=>ADD_TO_HEART(item)} />
+                  heart.some(i => i === item.id) ? <AiFillHeart onClick={() => REMOVE_FROM_HEART(item)} /> : <BiHeart onClick={()=>ADD_TO_HEART(item)} />
                 }
                 <a className={s.products_item_phoneNumber} href={"tel:" + item.phoneNumber}><FaPhoneAlt /></a>
               </div>

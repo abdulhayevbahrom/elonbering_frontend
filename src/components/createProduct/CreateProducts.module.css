@@ -1,96 +1,77 @@
 .createProduct{
-    width: 100%;
-    height: 90vh;
-    padding: 10px 30px;
-}
-.createInfo{
-    padding: 10px 0px;
-    border-bottom: 1px solid rgb(223, 7, 7);
-    margin-bottom: 25px;
+    width: 77%;
+    min-height: 96vh;
+    border: 4px solid;
+    border-image: linear-gradient(to top right,var(--main-bg),red) 1;
+    padding: 15px;  
+    padding-top: 5%;
 }
 
-.createFormWrapper{
-    width: 100%;
-    height: 75vh;
+.createProduct h1{
+    color: #fff;
+    font-weight: normal;
+    text-align: center;
 }
 
+.createForm {
+    width: 80%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+}
 
-
-.createForm input{
-    width: 100%;
-    height: 50px;
-    margin-top: 20px;
-    text-indent: 10px;
-    font-size: 15px;
-    border-radius: 5px;
-    color: #000;
-    border: 2px solid #BF0C2A;
-    margin-bottom: 26px;
+.createForm input,
+.createForm select,
+.createForm textarea{
+    background-color:transparent;
+    border-radius:3px;
+    border: 2px solid dodgerblue;
     outline: none;
-}
-.createFormWrapper label{
-    font-weight: 600;
-}
-
-.next_btn{
-    width: 10%;
-    height: 40px;
-    background-color: #000;
+    text-indent: 10px;
     color: #fff;
+    margin-bottom: 22px;
+    padding: 7px;
     font-size: 18px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.createFormWrapper select{
-    width: 12%;
-    height: 40px;
-    margin:0px 30px;
-    padding-left: 5px;
-    border-radius: 5px;
-    font-size: 15px;
+    width: 70%;
 }
 
-.createBtn{
-    width:180px;
-    height: 40px;
-    background-color: #000;
-    color: #fff;
-    font-size: 17px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.inputFileWrapper{
-    width: 120px;
-    height: 100px;
-    background-color: #BF0C2A;
-    border-radius: 10px;
-    margin-top: 30px;
-    position: relative;
-}
-
-.inputFile{
-    opacity: 0;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-}
-.inputFileWrapper p{
-    position: absolute;
-    top: 55px;
-    left: 19px;
-    font-size: 18px;
+.createForm select,
+.createForm select option{
+    background-color:#262139;
     color: #fff;
 }
-.inputFileWrapper img{
-    width: 50px;
-    position: absolute;
-    top: 5px;
-    left: 35px;
+
+.createForm textarea::placeholder,
+.createForm input::placeholder{
+    color: rgb(184, 184, 184);
 }
 
-.createLogo{
-    font-size: 50px;
-    margin-top: -20px;
-    color: #000;
+.createForm textarea{
+    text-indent: 5px;
+    padding: 4px;
+    color: #fff;
+    letter-spacing: .10rem;
+    resize: none;
+}
+
+.createForm label input{
+    display: none;
+}
+
+.createForm label svg{
+    font-size: 5vw;
+    color:#1265b8;
+    cursor: pointer;
+}
+
+.createForm input[type=button]{
+    background-color: #1265b8;
+    transition: 0.1s ease-in;
+    border: none;
+    cursor: pointer;
+}
+
+.createForm input[type=button]:active{
+    transform: scale(0.99);
 }

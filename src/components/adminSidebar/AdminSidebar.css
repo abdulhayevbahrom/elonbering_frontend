@@ -1,0 +1,33 @@
+.adminSidebar {
+    width: 22%;
+    height: 96vh;
+    border: 4px solid ;
+    border-image: linear-gradient(to bottom right,var(--main-bg),red) 1;
+    padding: 15px;
+}
+
+.adminSidebarLinkItem{
+    color: #fff;
+    display: block;
+    margin: 10px 0;
+    font-size: 22px;
+    border-radius: 5px;
+    padding:10px;
+    transition: 0.2s ease-in;
+    background-color: #ffffff21;
+}
+
+.adminSidebarLinkItem svg{
+    color: #fff;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.adminSidebarLinkItem_atcive{
+    background-color: #03000c6b;
+}
+
+.adminSidebarLinkItem_atcive,
+.adminSidebarLinkItem_atcive svg{
+    color: rgb(255, 0, 0);
+}

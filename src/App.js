@@ -16,6 +16,7 @@ import Mebels from "./routes/mebels/Mebels";
 import Xostovarlar from "./routes/xostovarlar/Xostovarlar";
 import Chorva from "./routes/chorva/Chorva";
 import Register from "./routes/register/Register";
+import Admin from "./routes/admin/Admin";
 
 function App() {
   useEffect(()=>{
@@ -39,6 +40,8 @@ function App() {
       <div className="app">
         <ToastContainer />
         <Switch>
+          <Route exact path="/admin" component={Admin} />
+
           <Route exact path="/" component={Home} />
           <Route path="/login" component={Login}/>
           <Route path="/register" component={Register}/>
