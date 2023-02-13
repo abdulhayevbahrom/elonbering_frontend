@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import './Cart.css';
 import Header from '../../components/Header/Header'
 import Caption from '../../components/caption/Caption'
@@ -12,41 +12,28 @@ import { AiFillHeart } from 'react-icons/ai'
 import { Link } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import {AddToHeart,RemoveFromHeart} from '../../hooks/useHeart'
+import { AddToHeart, RemoveFromHeart } from '../../hooks/useHeart'
 import { AddToCart, MinusFromCart } from '../../hooks/useCart'
 
 function Cart() {
   const dispatch = useDispatch()
   const [state, setState] = useState(false)
   const cart = useSelector(s => s.addToCart)
-  const heart = useSelector(s => s.addToHeart).map(i => i.id)   // for heart custom
+  const heart = useSelector(s => s.addToHeart).map(i => i._id)   // for heart custom
   const totalSum = cart.map(i => i.price * i.qty).reduce((a, b) => a + b, 0)
   const totalQty = cart.map(i => i.qty + 0).reduce((a, b) => a + b, 0)
 
-  const ADD_TO_HEART = (item) => {
-    return AddToHeart(item, dispatch, toast)
-  }
-
-  function REMOVE_FROM_HEART(item) {
-    return RemoveFromHeart(item, dispatch, toast)
-  }
-
-  function ADD_TO_CART(item) {
-   return AddToCart(item, cart, dispatch, toast)
-  }
-  
-  function MINUS_FROM_CART(item) {
-    return MinusFromCart(item, cart, dispatch)
-  }
-
+  function ADD_TO_HEART(item) { AddToHeart(item, dispatch, toast) }
+  function REMOVE_FROM_HEART(item) { RemoveFromHeart(item, dispatch, toast) }
+  function ADD_TO_CART(item) { AddToCart(item, cart, dispatch, toast) }
+  function MINUS_FROM_CART(item) { MinusFromCart(item, cart, dispatch) }
   function CLEARE_CART() {
     setState(false)
     dispatch({ type: "CLEARE_CART", payload: [] })
   }
 
-
-  function DELETE_ITEM_FROM_CART(id){
-    if(window.confirm("Ushbu mahsulotni o'chirmoqchimisiz?")){
+  function DELETE_ITEM_FROM_CART(id) {
+    if (window.confirm("Ushbu mahsulotni o'chirmoqchimisiz?")) {
       dispatch({ type: "REMOVE_FROM_CART", payload: id })
       toast.success("o'chirildi", {
         position: toast.POSITION.TOP_CENTER,
@@ -67,7 +54,7 @@ function Cart() {
               {
                 cart?.map((item, index) =>
                   <div key={index} className="cart_wrapper_item">
-                    <Link to={`/products/${item.id}`}>
+                    <Link to={`/products/${item._id}`}>
                       <img src={item.images[0]} alt="foto" />
                     </Link>
                     <div className="cart_wrapper_item_title">
@@ -80,12 +67,12 @@ function Cart() {
                       <h2>{item.qty}</h2>
                       <button><FaPlus onClick={() => ADD_TO_CART(item)} /></button>
                     </div>
-                    <h3>{(item.qty * item.price).brm()}</h3>
+                    <h3>{(item.qty * item.price).brm()} so'm</h3>
                     <div className='cart_wrapper_item_bnts'>
                       {
-                        heart.some(i => i === item.id) ? <AiFillHeart onClick={() => REMOVE_FROM_HEART(item)} /> : <BiHeart onClick={() => ADD_TO_HEART(item)} />
+                        heart.some(i => i === item._id) ? <AiFillHeart onClick={() => REMOVE_FROM_HEART(item)} /> : <BiHeart onClick={() => ADD_TO_HEART(item)} />
                       }
-                      <FaTrash className='cart_item_trash' onClick={() => DELETE_ITEM_FROM_CART(item.id)} />
+                      <FaTrash className='cart_item_trash' onClick={() => DELETE_ITEM_FROM_CART(item._id)} />
                     </div>
                   </div>
                 )

@@ -1,5 +1,5 @@
 export const AddToCart = (item, cart, dispatch, toast)=>{
-    const index = cart.findIndex(i => i.id === item.id)
+    const index = cart.findIndex(i => i._id === item._id)
     return index < 0 ? dispatch({ type: "ADD_TO_CART", payload: [...cart, {...item, qty: 1}] }) 
                     : (dispatch({ type: "ADD_TO_CART", payload:cart.map((order,inx)=> index=== inx ? {...order, qty: order.qty + 1} : order)}),
                         toast.success("Savatga qo'shildi", {
@@ -9,6 +9,6 @@ export const AddToCart = (item, cart, dispatch, toast)=>{
 }
 
 export const MinusFromCart = (item,cart, dispatch)=>{
-const index = cart.findIndex(i => i.id === item.id)
+const index = cart.findIndex(i => i._id === item._id)
   return item.qty <=1 ? null :  dispatch({ type: "ADD_TO_CART", payload: cart.map((order,inx)=> index===inx ? {...order, qty:order.qty-1} : order)})
 }

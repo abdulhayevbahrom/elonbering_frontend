@@ -1,8 +1,13 @@
-.allproducts{
+.allproducts {
     width: 77%;
     min-height: 96vh;
     border: 4px solid;
-    border-image: linear-gradient(to top right,var(--main-bg),red) 1;
-    padding: 15px;  
+    border-image: linear-gradient(to top right, var(--main-bg), red) 1;
+    padding: 15px;
     padding-top: 5%;
+}
+
+.allproducts .products_wrapper {
+    background-image: none;
+    background-color: red;
 }

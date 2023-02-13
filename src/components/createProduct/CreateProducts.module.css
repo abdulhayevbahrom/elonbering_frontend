@@ -1,13 +1,13 @@
-.createProduct{
+.createProduct {
     width: 77%;
     min-height: 96vh;
     border: 4px solid;
-    border-image: linear-gradient(to top right,var(--main-bg),red) 1;
-    padding: 15px;  
+    border-image: linear-gradient(to top right, var(--main-bg), red) 1;
+    padding: 15px;
     padding-top: 5%;
 }
 
-.createProduct h1{
+.createProduct h1 {
     color: #fff;
     font-weight: normal;
     text-align: center;
@@ -23,9 +23,9 @@
 
 .createForm input,
 .createForm select,
-.createForm textarea{
-    background-color:transparent;
-    border-radius:3px;
+.createForm textarea {
+    background-color: transparent;
+    border-radius: 3px;
     border: 2px solid dodgerblue;
     outline: none;
     text-indent: 10px;
@@ -37,17 +37,17 @@
 }
 
 .createForm select,
-.createForm select option{
-    background-color:#262139;
+.createForm select option {
+    background-color: #262139;
     color: #fff;
 }
 
 .createForm textarea::placeholder,
-.createForm input::placeholder{
+.createForm input::placeholder {
     color: rgb(184, 184, 184);
 }
 
-.createForm textarea{
+.createForm textarea {
     text-indent: 5px;
     padding: 4px;
     color: #fff;
@@ -55,23 +55,32 @@
     resize: none;
 }
 
-.createForm label input{
+.createForm label input {
     display: none;
 }
 
-.createForm label svg{
+.createForm label svg {
     font-size: 5vw;
-    color:#1265b8;
+    color: #1265b8;
     cursor: pointer;
 }
 
-.createForm input[type=button]{
+.createForm input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.createForm input:disabled {
+    border: 2px solid #999;
+    opacity: .5;
+}
+
+.createForm input[type=button] {
     background-color: #1265b8;
     transition: 0.1s ease-in;
     border: none;
     cursor: pointer;
 }
 
-.createForm input[type=button]:active{
+.createForm input[type=button]:active {
     transform: scale(0.99);
 }

@@ -5,7 +5,6 @@
 .cart_wrapper {
     display: flex;
     justify-content: space-between;
-    background-image: url(../../assets/bg.webp);
     min-height: 90vh;
     padding: 0 2%;
 }
@@ -67,6 +66,10 @@
 .cart_wrapper_item_title p:nth-child(2) span,
 .cart_wrapper_item_title p:last-child span {
     font-weight: 100;
+}
+
+.cart_wrapper_item h3 {
+    width: 20%;
 }
 
 .cart_wrapper_item_qty button {
