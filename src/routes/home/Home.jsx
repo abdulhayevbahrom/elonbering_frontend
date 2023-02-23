@@ -13,9 +13,9 @@ function Home() {
         <Header />
         <Categories />
       </div>
-      <BannerCarousel />
-      <Products />
-      <Footer />
+      {/* <BannerCarousel /> */}
+      {/* <Products /> */}
+      {/* <Footer /> */}
     </div>
   )
 }

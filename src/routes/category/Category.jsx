@@ -17,7 +17,7 @@ function Category() {
 
     useEffect(() => {
         setLoader(true)
-        axios.get(`/products/${pathname.slice(1)}`)
+        axios.get(`/products/${pathname.slice(1)}`, { onDownloadProgress: (e) => { console.log(Math.round(e.loaded * 100 / e.total)) } })
             .then(res => {
                 if (res.data.state) {
                     setAllProducts(res.data.innerData)

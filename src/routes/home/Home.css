@@ -1,13 +1,13 @@
-.home{
+.home {
     position: relative;
 }
 
-.home_navbar{
+.home_navbar {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    position:sticky;
+    position: sticky;
     top: 0;
     left: 0;
     z-index: 999;

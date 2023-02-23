@@ -1,4 +1,4 @@
-import React, {Suspense} from "react";
+import React, { Suspense } from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import './language/i18next'
@@ -32,9 +32,9 @@ ReactDOM.render(
       <Provider store={store}>
         <PersistGate loading={null} persistor={persister}>
           <BrowserRouter>
-          <Suspense fallback={<Loader/>}>
-            <App />
-          </Suspense>
+            <Suspense fallback={<Loader />}>
+              <App />
+            </Suspense>
           </BrowserRouter>
         </PersistGate>
       </Provider>

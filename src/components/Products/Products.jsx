@@ -10,11 +10,9 @@ const Products = () => {
   const [loader, setLoader] = useState(false)
   const [allProducts, setAllProducts] = useState([])
 
-  console.log(allProducts);
-
   useEffect(() => {
     setLoader(true)
-    axios.get('/products')
+    axios.get('products')
       .then(res => { res.data.state && setAllProducts(res.data.innerData) })
       .catch(err => console.log(err))
       .finally(() => setLoader(false))

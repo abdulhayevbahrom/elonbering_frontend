@@ -43,9 +43,10 @@ const Header = () => {
 
   return (
     <div className="header">
-      <Link to="/"><img src={logo} className="logo" alt="" /></Link>
+      {/* <Link to="/"><img src={logo} className="logo" alt="" /></Link> */}
+      <Link to="/" className='logo'>Elon Bering</Link>
       <div className="header_searchbar">
-        <input type="text" placeholder={text} autoFocus onChange={(e) => searchFunction(e.target.value)} />
+        <input type="search" placeholder={text} onChange={(e) => searchFunction(e.target.value)} />
         <div className="searched" style={{ display: show ? "block" : "none" }}>
           {
             searched.length && searched.map((item, index) =>
