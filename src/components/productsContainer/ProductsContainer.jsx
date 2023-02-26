@@ -49,7 +49,7 @@ function ProductsContainer({ loader, allProducts }) {
             {
               allProducts?.map((item, index) =>
                 <div key={index} className='productsContainer_item'>
-                  <Link to={`/products/${item._id}`} className="productsContainer_item_img">
+                  <Link to={`/products/${item._id}`} style={{ backgroundImage: `url(${item.images[0]})`, backgroundPosition: "center" }} className="productsContainer_item_img">
                     <img src={item.images[0]} alt={item.title} />
                   </Link>
                   <p>{Capitalize(item.title)}</p>

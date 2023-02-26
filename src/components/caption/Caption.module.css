@@ -1,4 +1,4 @@
-.products_caption{
+.products_caption {
     width: 100%;
     height: 50px;
     display: flex;
@@ -11,9 +11,45 @@
 
 }
 
-.products_caption .hr{
+.products_caption .hr {
     flex: 1;
     height: 5px;
-    background-color:var(--main-bg);
+    background-color: var(--main-bg);
     margin-left: 10px;
+}
+
+@media screen and (max-width:1400px) {
+    .products_caption h2 {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .products_caption {
+        margin: 10px;
+        padding: 10px 1%;
+    }
+
+    .products_caption h2 {
+        font-size: 19px;
+    }
+
+    .products_caption .hr {
+        height: 4px;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .products_caption {
+        margin: 5px;
+        padding: 0px 1%;
+    }
+
+    .products_caption h2 {
+        font-size: 17px;
+    }
+
+    .products_caption .hr {
+        height: 3px;
+    }
 }

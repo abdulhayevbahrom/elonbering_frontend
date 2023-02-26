@@ -18,7 +18,7 @@ const Categories = () => {
       <div className={s.category_sidebar} style={{ display: categoriesSidebarShow ? "block" : "none" }}>
         <FiX className={s.categories_sidebar_X} onClick={() => setCategoriesSidebarShow(!categoriesSidebarShow)} />
         {
-          Category()?.map((i, inx) => <NavLink exact activeClassName={s.categories_active} className={s.categories_sidebar_item} key={inx} to={i.link}>{i.title}</NavLink>)
+          Category()?.map((i, inx) => <NavLink onClick={() => setCategoriesSidebarShow(!categoriesSidebarShow)} exact activeClassName={s.categories_active} className={s.categories_sidebar_item} key={inx} to={i.link}>{i.title}</NavLink>)
         }
       </div>
     </div>

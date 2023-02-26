@@ -13,8 +13,8 @@ function Home() {
         <Header />
         <Categories />
       </div>
-      {/* <BannerCarousel /> */}
-      {/* <Products /> */}
+      <BannerCarousel />
+      <Products />
       {/* <Footer /> */}
     </div>
   )
